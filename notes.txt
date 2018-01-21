@@ -1,42 +1,6 @@
-1.How to set up:
-bundle install
-
-2.Web drivers setting up (Ubuntu):
-Solution 1:
-npm install
-nvm install 6.10
-npm install -g geckodriver
-Solution 2: Update ~/.profile with webdrivers
-
-3. Dependencies
-PATH="/home/michaelho/Downloads/automation/ansi160:$PATH"
-PATH="/home/michaelho/Downloads/automation/SublimeText2:$PATH"
-
-4. Execute command lines cucumber (run all features on default env against default browser but not features with @skip)
-cucumber -p wip (only run @wip on default env against default browser)
-cucumber -p dev (run all features on dev env against default browser but not features with @skip)
-cucumber -p chrome (run all features on default env against chrome browser but not features with @skip)
-cucumber features/feature_name.feature (run feature_name.feature on default env against default browser but not features with @skip)
-cucumber features/feature_name.feature -p stage -p ff (run feature_name.feature on stage env against ff browser but not features with @skip)
-
-
-5. Jenkins:
-http://gillesfabio.com/blog/2011/03/01/rvm-for-pythonistas-virtualenv-for-rubyists/
-https://www.blazemeter.com/blog/headless-execution-selenium-tests-jenkins
-https://dzone.com/articles/run-headless-selenium-tests-from-jenkins
-#!/bin/bash
-
-#dependencies needed for automated test
-npm install geckodriver
-npm install xvfb
-npm install headless
-gem install bundler --pre
-bundle install
-
-#running test
-cucumber features/smoketest.feature -p headless
-
-#clean up
-rvm gemset delete admin_ui_test
-
-fix bug: https://github.com/rvm/rvm/issues/2696
+Todo:
+1. auto launch and close emulator
+2. auto start/stop appium
+3. page-object
+4. browser stack
+5. define emulator device name in profile
