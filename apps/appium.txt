@@ -1,0 +1,8 @@
+[caps]
+platformName = 'Android'
+deviceName = 'SuTaxiWXGA'
+app = './AndroidCalculator.apk'
+
+[appium_lib]
+sauce_username = ""
+sauce_access_key = ""

@@ -31,3 +31,14 @@ end
 
 After do
 end
+
+at_exit do
+  # Kill simulators or drivers
+  case $platform
+    when "android"
+      AppiumAndroid::AppiumHelper.appium_teardown($driver)
+      AppiumAndroid::Android.android_teardown
+    else
+      puts "At exit: nothing to do"
+  end
+end

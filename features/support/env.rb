@@ -13,32 +13,34 @@ require 'nokogiri'
 require 'pry'
 require 'httparty'
 require 'watir-scroll'
+require 'sidekiq'
 require_all 'lib'
 
 # Store command line arguments
+ENV['FRAMEWORK'] = File.expand_path('.')
 $platform = ENV['PLATFORM'] || 'desktop'
 $os_version = ENV['OS_VERSION']
 $device_name = ENV['DEVICE_NAME']
 $udid = ENV['UDID']
 $app_path = ENV['APP_PATH']
-$emulator = ENV['android_device'] || ''
-# puts "\n platform: #{$platform}"
-# puts "\n os_version: #{$os_version}"
-# puts "\n device_name: #{$device_name}"
-# puts "\n udid: #{$udid}"
-# puts "\n app_path: #{$app_path}"
-# puts "\n emulator: #{$emulator}"
-# puts "\n --------------------------"
 
 # If platform is android or ios create driver instance for mobile browser
 if $platform == 'android'
-  $device_name, $os_version = get_device_info
-  # puts "\n platform: #{$platform}"
-  # puts "\n os_version: #{$os_version}"
-  # puts "\n device_name: #{$device_name}"
-  # puts "\n udid: #{$udid}"
-  # puts "\n app_path: #{$app_path}"
-  # puts "\n --------------------------"
+    if (!$device_name.to_s.empty?)
+      AppiumAndroid::AndroidEnvironment.get_proper_app($device_name)
+      AppiumAndroid::Android.android_setup($device_name)
+    else
+      puts "Automation test against real connected device."
+    end
+    $device_name, $os_version = get_device_info
+    # puts "--------------------------"
+    # puts "desired_caps:"
+    # puts "platform: #{$platform}"
+    # puts "os_version: #{$os_version}"
+    # puts "device_name: #{$device_name}"
+    # puts "udid: #{$udid}"
+    # puts "app_path: #{$app_path}"
+    # puts "--------------------------"
   desired_caps = {
     caps:       {
       platformName:  $platform,
@@ -49,6 +51,7 @@ if $platform == 'android'
       },
     }
   begin
+    AppiumAndroid::AppiumHelper.appium_start
     $driver = Appium::Driver.new(desired_caps, true).start_driver
   rescue Exception => e
     puts e.message
