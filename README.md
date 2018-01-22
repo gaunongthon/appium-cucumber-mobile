@@ -2,9 +2,7 @@
 
 ### What is this? ###
 
-This repository is used for automated smoke test and functional test of web application.
-
-* Based on: selenium-ruby-cucumber - web application BDD test
+This repository is used for automated smoke test and functional test of mobile application.
 
 ### How do I get set up? ###
 
@@ -25,8 +23,8 @@ Check ruby version
 Create a gemset (Where virtualenv has “environments”, RVM has “gemsets”)
 ```
 rvm use 2.3.1
-rvm gemset create selenium_ui_test
-rvm gemset use selenium_ui_test
+rvm gemset create selenium_mobile
+rvm gemset use selenium_mobile
 ```
 
 Install dependencies
@@ -37,8 +35,8 @@ bundle install
 
 Only run these commands to clean up your gemset (virtual environment for ruby)
 ```
-rvm gemset empty selenium_ui_test
-rvm gemset delete selenium_ui_test
+rvm gemset empty selenium_mobile
+rvm gemset delete selenium_mobile
 ```
 
 ### How do I execute test? ###
@@ -51,21 +49,6 @@ Start Emulator
 
 Run test
 `cucumber -p android_emu`
-
-
-### More options to run test cases ###
-
-only run @wip on default env against default browser
-
-`cucumber -p wip -p ff`
-
-run feature_name.feature on default env against default browser but not features with @skip
-
-`cucumber -p headless features/feature_name.feature`
-
-run feature_name.feature on default env against ff browser but not features with @skip
-
-`cucumber features/feature_name.feature -p ff`
 
 ### How do I view test report? ###
 ```
