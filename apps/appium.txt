@@ -1,6 +1,6 @@
 [caps]
-platformName = 'Android'
-deviceName = 'SuTaxiWXGA'
+platformName = 'android'
+deviceName = 'GalaxyNexus19'
 app = './AndroidCalculator.apk'
 
 [appium_lib]
