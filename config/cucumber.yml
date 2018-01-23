@@ -1,3 +1,3 @@
 <% common = "--format html --out results.html --format json --out reports.json --format pretty --color --no-source --tags 'not @skip'" %>
 android_real: <%= common %> PLATFORM=android APP_PATH=./apps/AndroidCalculator.apk
-android_emu: <%= common %> PLATFORM=android APP_PATH=./apps/AndroidCalculator.apk DEVICE_NAME=SuTaxiWXGA
+android_emu: <%= common %> PLATFORM=android APP_PATH=./apps/AndroidCalculator.apk DEVICE_NAME=GalaxyNexus19
