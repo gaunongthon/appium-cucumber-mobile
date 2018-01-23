@@ -1,0 +1,42 @@
+BSCMACPC0258:appium-cucumber-mobile michaelho$ gem env
+RubyGems Environment:
+  - RUBYGEMS VERSION: 2.6.11
+  - RUBY VERSION: 2.3.1 (2016-04-26 patchlevel 112) [x86_64-darwin16]
+  - INSTALLATION DIRECTORY: /Users/michaelho/.rvm/gems/ruby-2.3.1@appium_mobile
+  - USER INSTALLATION DIRECTORY: /Users/michaelho/.gem/ruby/2.3.0
+  - RUBY EXECUTABLE: /Users/michaelho/.rvm/rubies/ruby-2.3.1/bin/ruby
+  - EXECUTABLE DIRECTORY: /Users/michaelho/.rvm/gems/ruby-2.3.1@appium_mobile/bin
+  - SPEC CACHE DIRECTORY: /Users/michaelho/.gem/specs
+  - SYSTEM CONFIGURATION DIRECTORY: /Users/michaelho/.rvm/rubies/ruby-2.3.1/etc
+  - RUBYGEMS PLATFORMS:
+    - ruby
+    - x86_64-darwin-16
+  - GEM PATHS:
+     - /Users/michaelho/.rvm/gems/ruby-2.3.1@appium_mobile
+     - /Users/michaelho/.rvm/gems/ruby-2.3.1@global
+  - GEM CONFIGURATION:
+     - :update_sources => true
+     - :verbose => true
+     - :backtrace => false
+     - :bulk_threshold => 1000
+     - "gem" => "--no-document"
+  - REMOTE SOURCES:
+     - https://rubygems.org/
+  - SHELL PATH:
+     - /Users/michaelho/.rvm/gems/ruby-2.3.1@appium_mobile/bin
+     - /Users/michaelho/.rvm/gems/ruby-2.3.1@global/bin
+     - /Users/michaelho/.rvm/rubies/ruby-2.3.1/bin
+     - /Users/michaelho/.rvm/bin
+     - /usr/local/bin
+     - /usr/bin
+     - /bin
+     - /usr/sbin
+     - /sbin
+     - /Users/michaelho/Documents/drivers
+     - /Users/michaelho/Documents/drivers
+     - /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator
+     - /Users/michaelho/Library/Android/sdk/build-tools/25.0.2
+     - /Users/michaelho/Library/Android/sdk/platform-tools
+     - /Users/michaelho/Library/Android/sdk/emulator
+     - /Users/michaelho/Library/Android/sdk/tools
+     - /Users/michaelho/Library/Android/sdk/tools/bin

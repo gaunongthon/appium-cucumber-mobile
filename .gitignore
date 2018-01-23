@@ -1,4 +1,4 @@
-appium*
-emulator*
+appium*.txt
+emulator*.txt
 Gemfile.lock
 report*
