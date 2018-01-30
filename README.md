@@ -6,6 +6,8 @@ This repository is used for automated smoke test and functional test of mobile a
 
 ### How do I get set up? ###
 
+See details in docs/how_to_prepare_env.md
+
 Create virtual env for installing all dependencies
 
 Install rvm
@@ -38,17 +40,26 @@ Only run these commands to clean up your gemset (virtual environment for ruby)
 rvm gemset empty selenium_mobile
 rvm gemset delete selenium_mobile
 ```
-
-### How do I execute test? ###
+### How to get elements on app?
 
 Start Appium
 `appium`
 
-Start Emulator
-`emulator -avd GalaxyNexus19`
+Start Emulator (Using Android SDK to create emulator)
+`emulator -avd Emulator_Name`
 
-Run test
+Start Appium Ruby Console
+`arc`
+
+See details in docs/how_to_get_elements.md
+
+### How do I execute test? ###
+
+Run test on emulator
 `cucumber -p android_emu`
+
+Run test on real device
+`cucumber -p android_real`
 
 ### How do I view test report? ###
 ```

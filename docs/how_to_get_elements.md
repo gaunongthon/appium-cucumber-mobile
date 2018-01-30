@@ -1,14 +1,15 @@
-Mobile automation - Debug and Execute test
+Mobile automation - How to get elements
 
 Step to debug and get element ids:
 
 Pre-condition:
-appium.txt has info looks like
+apps/appium.txt has info looks like
 [caps]
 platformName = 'android'
 deviceName = 'GalaxyNexus19'
 app = 'apps/GalaxyNexus19/Calculator.apk'
 url = 'http://127.0.0.1:4723/wd/hub'
+
 appium.txt file will decide what environment will be used (avd_name) as well as what apk (android application) will be loaded on that environment
 
 Step 1: Check existing emulator
